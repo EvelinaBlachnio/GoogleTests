@@ -1,0 +1,36 @@
+<testsuites>
+  <testsuite name="Project.UITests.dll" tests="6" skipped="0" failures="2" errors="0" time="43.1097879" timestamp="2021-11-21T10:35:23" hostname="DESKTOP-PNIHV45" id="0" package="Project.UITests.dll">
+    <properties />
+    <testcase classname="Project.UITests.RestApiTests" name="Project.UITests.RestApiTests.CheckNamePlanet_ReturnsIsNamePlanetCorrect" time="0.4879317" />
+    <testcase classname="Project.UITests.RestApiTests" name="Project.UITests.RestApiTests.CheckNamePlanet_ReturnsIsNamePlanetIncorrect" time="0.1420721" />
+    <testcase classname="Project.UITests.GoogleMapsTests" name="Project.UITests.GoogleMapsTests.CheckTimeAndDistanceWalk_ReturnsIsRange(startPoint: &quot;Plac Defilad 1, Warszawa&quot;, endPoint: &quot;Chłodna 51, Warszawa&quot;, expectedTime: 40, expectedDistance: 3)" time="11.3818500">
+      <failure type="failure" message="Assert.True() Failure&#xD;&#xA;Expected: True&#xD;&#xA;Actual:   False">at Project.UITests.GoogleMapsTests.CheckTimeAndDistanceWalk_ReturnsIsRange(String startPoint, String endPoint, Int32 expectedTime, Int32 expectedDistance) in C:\Projects\Project\Project.UITests\Project.UITests\GoogleMapsTests.cs:line 44</failure>
+    </testcase>
+    <testcase classname="Project.UITests.GoogleMapsTests" name="Project.UITests.GoogleMapsTests.CheckTimeAndDistanceWalk_ReturnsIsRange(startPoint: &quot;Chłodna 51, Warszawa&quot;, endPoint: &quot;Plac Defilad 1, Warszawa&quot;, expectedTime: 40, expectedDistance: 3)" time="8.7619976">
+      <failure type="failure" message="Assert.True() Failure&#xD;&#xA;Expected: True&#xD;&#xA;Actual:   False">at Project.UITests.GoogleMapsTests.CheckTimeAndDistanceWalk_ReturnsIsRange(String startPoint, String endPoint, Int32 expectedTime, Int32 expectedDistance) in C:\Projects\Project\Project.UITests\Project.UITests\GoogleMapsTests.cs:line 44</failure>
+    </testcase>
+    <testcase classname="Project.UITests.GoogleMapsTests" name="Project.UITests.GoogleMapsTests.CheckTimeAndDistanceBike_ReturnsIsRange(startPoint: &quot;Chłodna 51, Warszawa&quot;, endPoint: &quot;Plac Defilad 1, Warszawa&quot;, expectedTime: 40, expectedDistance: 3)" time="11.6278445" />
+    <testcase classname="Project.UITests.GoogleMapsTests" name="Project.UITests.GoogleMapsTests.CheckTimeAndDistanceBike_ReturnsIsRange(startPoint: &quot;Plac Defilad 1, Warszawa&quot;, endPoint: &quot;Chłodna 51, Warszawa&quot;, expectedTime: 40, expectedDistance: 3)" time="10.7080920" />
+    <system-out>
+Test Framework Informational Messages:
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 5.0.12)
+[xUnit.net 00:00:00.79]   Discovering: Project.UITests
+[xUnit.net 00:00:00.85]   Discovered:  Project.UITests
+[xUnit.net 00:00:00.86]   Starting:    Project.UITests
+[xUnit.net 00:00:13.80]       Assert.True() Failure
+[xUnit.net 00:00:13.80]       Expected: True
+[xUnit.net 00:00:13.80]       Actual:   False
+[xUnit.net 00:00:13.80]       Stack Trace:
+[xUnit.net 00:00:13.81]         C:\Projects\Project\Project.UITests\Project.UITests\GoogleMapsTests.cs(44,0): at Project.UITests.GoogleMapsTests.CheckTimeAndDistanceWalk_ReturnsIsRange(String startPoint, String endPoint, Int32 expectedTime, Int32 expectedDistance)
+[xUnit.net 00:00:23.80]       Assert.True() Failure
+[xUnit.net 00:00:23.80]       Expected: True
+[xUnit.net 00:00:23.80]       Actual:   False
+[xUnit.net 00:00:23.80]       Stack Trace:
+[xUnit.net 00:00:23.80]         C:\Projects\Project\Project.UITests\Project.UITests\GoogleMapsTests.cs(44,0): at Project.UITests.GoogleMapsTests.CheckTimeAndDistanceWalk_ReturnsIsRange(String startPoint, String endPoint, Int32 expectedTime, Int32 expectedDistance)
+[xUnit.net 00:00:48.47]   Finished:    Project.UITests
+</system-out>
+    <system-err>Error - [xUnit.net 00:00:13.80]     Project.UITests.GoogleMapsTests.CheckTimeAndDistanceWalk_ReturnsIsRange(startPoint: "Plac Defilad 1, Warszawa", endPoint: "Chłodna 51, Warszawa", expectedTime: 40, expectedDistance: 3) [FAIL]
+Error - [xUnit.net 00:00:23.80]     Project.UITests.GoogleMapsTests.CheckTimeAndDistanceWalk_ReturnsIsRange(startPoint: "Chłodna 51, Warszawa", endPoint: "Plac Defilad 1, Warszawa", expectedTime: 40, expectedDistance: 3) [FAIL]
+</system-err>
+  </testsuite>
+</testsuites>
