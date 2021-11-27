@@ -69,11 +69,28 @@ namespace Project.Core.PageObjects
             return this;
         }
 
-        public List<decimal> GetTripTime()
+        public IEnumerable<TimeSpan> GetTripTime()
         {
-            var regex = new Regex(@"[0-9]+");
             var tripsTimeList = WaitAndFindElements(_tripTime);
-            return tripsTimeList.Select(s => decimal.Parse(regex.Match(s.Text.Replace(',', '.')).Value)).ToList();
+
+            var regexs = new[] {
+                new Regex(@"(?<hour>[\d]+) godz. (?<min>[\d]+) min"),
+                new Regex(@"(?<min>[\d]+) min")
+            };
+
+            foreach (var tripTime in tripsTimeList)
+            {
+                foreach (var regex in regexs)
+                {
+                    if (regex.Match(tripTime.Text) is { Success: true } match)
+                    {
+                        var groupsMin = match.Groups["min"].Value;
+                        var groupsHour = string.IsNullOrEmpty(match.Groups["hour"].Value) ? "0" : match.Groups["hour"].Value;
+                        yield return new TimeSpan(int.Parse(groupsHour), int.Parse(groupsMin), 0);
+                        yield break;
+                    }
+                }
+            }
         }
 
         public List<double> GetTripDisctance()
